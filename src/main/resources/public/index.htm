@@ -51,6 +51,7 @@
 <script> 
 $(document).ready(function() {
 	hk_services_get();
+	hk_contactus_post();
 });
 </script> 
 
@@ -78,11 +79,11 @@ $(document).ready(function() {
 	            <ul class="clearfix">
 	           	<li class="active"><a href="index.htm" title="">Home</a></li>
                 <li><a href="about-us.htm" title="">About Us</a></li>                
-                <li><a href="gallery.htm" title="">Gallery</a></li>
                 <li><a href="components.htm" title=""><span>Services</span></a>
   			      <ul class="fh5co-sub-menu"> <!-- vj Submenu -->
-                  
   		         </ul> <!-- End Submenu -->      
+
+                <li><a href="gallery.htm" title="">Gallery</a></li>
 
                 <li><a href="components.htm" title=""><span>Features</span></a>
   			      <ul> <!-- Submenu -->
@@ -144,14 +145,14 @@ $(document).ready(function() {
             <!-- Service Container End --> 
             <div class="span4">
               <div class="ic-1"><i class="icon-resize-small"></i></div>
-              <div class="title-1"><h4>Fully responsive</h4></div>
+              <div class="title-1"><h4>Digital Marketing</h4></div>
               <div class="text-1">         
                 Iil utilise un dictionnaire de plus de 200 mots kan rlarem as Ipsumtiotins, en combiake apple pie. Gingerbread icing ice cream applicake wafenaison.
               </div>
             </div>
             <div class="span4">
               <div class="ic-1"><i class="icon-eye-open"></i></div>
-              <div class="title-1"><h4>Retina Ready</h4></div>
+              <div class="title-1"><h4>Search Engine Optimization</h4></div>
               <div class="text-1">
                 Contrairement à une opinion répandue, Lorem as Ipsumtionnaire de plus n'est pas simplake apple pie. Gingerbread cotton  ice cream applicake wafeement.
               </div>
@@ -172,11 +173,11 @@ $(document).ready(function() {
           <div class="text-1"> 
             <ul class="list-b">
               <!-- List Items -->
-              <li><i class="icon-ok"></i> Tax Consulting.</li>
-              <li><i class="icon-ok"></i> Business Consulting.</li>
-              <li><i class="icon-ok"></i> Data analysis methods.</li>
-              <li><i class="icon-ok"></i> On demand consulting.</li>
-              <li><i class="icon-ok"></i> Private consultant.</li>
+              <li><i class="icon-ok"></i> SEARCH ENGINE OPTIMIZATION.</li>
+              <li><i class="icon-ok"></i> BUILDING WEBSITES.</li> 
+              <li><i class="icon-ok"></i> DIGITAL MARKETING.</li>
+              <li><i class="icon-ok"></i> BUSINESS INSIGHT AND REPORTING.</li>
+              <li><i class="icon-ok"></i> ON DEMAND CONSULTING.</li>
             </ul>     
           </div>
           <!-- List End -->
@@ -283,20 +284,20 @@ $(document).ready(function() {
           <form class="form-main" name="ajax-form" id="ajax-form" action="#" method="post">
             <div id="ajaxsuccess">E-mail was successfully sent.</div> 
             <div class="error" id="err-name">Please enter name</div>
-            <input name="name" id="name" type="text" value="Name" onfocus="if(this.value == 'Name') this.value='';" onblur="if(this.value == '') this.value='Name';">
+            <input name="name" id="hk_name" type="text" value="Name" onfocus="if(this.value == 'Name') this.value='';" onblur="if(this.value == '') this.value='Name';">
             
             <div class="error" id="err-email">Please enter e-mail</div>
 		        <div class="error" id="err-emailvld">E-mail is not a valid format</div>
-            <input  name="email" id="email" type="text" value="E-mail" onfocus="if(this.value == 'E-mail') this.value='';" onblur="if(this.value == '') this.value='E-mail';">
+            <input  name="email" id="hk_email" type="text" value="E-mail" onfocus="if(this.value == 'E-mail') this.value='';" onblur="if(this.value == '') this.value='E-mail';">
 
             <div class="error" id="err-message">Please enter message</div>
-            <textarea  name="message" id="message" onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Message';">Message</textarea><br>
+            <textarea  name="message" id="hk_message" onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Message';">Message</textarea><br>
             <div>
             	<div class="error" id="err-form">There was a problem validating the form please check!</div>
             	<div class="error" id="err-timedout">The connection to the server timed out!</div>
             	<div class="error" id="err-state"></div>
             </div>
-            <button id="send" class="btn f-right">Send Message <i class="icon-ok"></i></button>
+            <button id="send" onclick="hk_contactus_post();" class="btn f-right">Send Message <i class="icon-ok"></i></button>
           </form>
         </div>
         </div>

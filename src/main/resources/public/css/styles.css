@@ -916,9 +916,10 @@ table a:hover{
   width:95%;
   padding:16px 12px 14px 12px; 
   margin-top:10px;
-  background:#464646;
+  background:#00;
   border-radius:0px;
   border:0px;
+  style="color: #ffff;"
 }
 
 .form-main textarea {

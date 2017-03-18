@@ -12,9 +12,33 @@ function hk_services_get()
             var obj = response;
             var $grouplist = $('.fh5co-sub-menu');
             for (var i = 0; i < obj.length; i++) {
-                $('<li>' + '<a>' + obj[i].sr_DESCRIPTION + '</a>' + '</li>').appendTo($grouplist);
+            	file_name = obj[i].sr_DESCRIPTION.replace(/\ /g, '_')
+                $('<li>' + '<a href='+file_name+'.htm>' + obj[i].sr_DESCRIPTION + '</a>' + '</li>').appendTo($grouplist);
              }
 
+        }
+    });
+
+}
+
+//For contact us post
+function hk_contactus_post()
+{
+    //alert(1234);
+	 $('#contcat_success').show();
+    $.ajax({
+        dataType: "json",
+        type: "post",
+        data: {
+            hk_message: $('#hk_message').val(),
+            hk_email: $('#hk_email').val(),
+            hk_name: $('#hk_name').val()
+        },
+        //url: 'http://localhost:8181/api/v1/message/create',
+        url: '/api/v1/message/create',
+        success: function(response) {
+           //alert(1);
+        	 $('#err-state').show();
         }
     });
 

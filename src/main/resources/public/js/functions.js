@@ -128,14 +128,15 @@ jQuery(document).ready(function($) {
 
 		var error = false; // we will set this true if the form isn't valid
 
-		var name = $('input#name').val(); // get the value of the input field
+		var name = $('input#hk_name').val(); // get the value of the input field
 		if(name == "" || name == " " || name == "Name") {
 			$('#err-name').fadeIn('slow'); // show the error message
 			error = true; // change the error state to true
 		}
 
+
 		var email_compare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
-		var email = $('input#email').val(); // get the value of the input field
+		var email = $('input#hk_email').val(); // get the value of the input field
 		if (email == "" || email == " " || email == "E-mail") { // check if the field is empty
 			$('#err-email').fadeIn('slow'); // error - empty
 			error = true;
@@ -143,8 +144,9 @@ jQuery(document).ready(function($) {
 			$('#err-emailvld').fadeIn('slow'); // error - not right format
 			error = true;
 		}
-    
-		var message = $('textarea#message').val(); // get the value of the input field
+
+  
+		var message = $('textarea#hk_message').val(); // get the value of the input field
 		if(message == "" || message == " " || message == "Message") {
 			$('#err-message').fadeIn('slow'); // show the error message
 			error = true; // change the error state to true
